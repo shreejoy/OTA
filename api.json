@@ -1,1 +1,13 @@
-
+{
+   "response": [
+      {
+         "size": "29103218",
+         "datetime": "201903101457",
+         "url": "https://storage.googleapis.com/kernel_project/X-KERNEL-ROSY-X1-20190310-1457-BETA.zip",
+         "filename": "X-KERNEL-ROSY-X1-20190310-1457-BETA.zip",
+         "version": "X1",
+         "id": "807c47c640c0e4d5d27e2ee00b8a4115",
+         "romtype": "BETA"
+      }
+   ]
+}
