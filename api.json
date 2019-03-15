@@ -1,13 +1,25 @@
-{
-   "response": [
-      {
-         "size": "29103218",
-         "datetime": "1552229820",
-         "url": "https://storage.googleapis.com/kernel_project/X-KERNEL-ROSY-X1-20190310-1457-BETA.zip",
-         "filename": "X-KERNEL-ROSY-X1-20190310-1457-BETA.zip",
-         "version": "X1",
-         "id": "807c47c640c0e4d5d27e2ee00b8a4115",
-         "romtype": "BETA"
+{  
+   "name":"CodeX-Kernel",
+   "description":"A battery friendly and performance optimized kernel. Cause your device deserves it!",
+   "features":[  
+      "No features added yet"
+   ],
+   "CPU Governors":[  
+      "No governers added yet"
+   ],
+   "I/O Schedulers":[  
+      "No I/O scheduler added yet"
+   ],
+   "downloads":{  
+      "name":"Nano kernel 0.1",
+      "ver":"v0.1",
+      "url":"https://github.com/AxelBlaz3/Codex-Kernel/raw/gh-pages/Stable/Codex-v1.2.zip"
+   },
+   "changelog":[  
+      {  
+         "added":[  
+            "Everything to be added soon"
+         ]
       }
    ]
 }
