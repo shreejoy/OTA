@@ -1,25 +1,7 @@
 {  
-   "name":"CodeX-Kernel",
-   "description":"A battery friendly and performance optimized kernel. Cause your device deserves it!",
-   "features":[  
-      "No features added yet"
-   ],
-   "CPU Governors":[  
-      "No governers added yet"
-   ],
-   "I/O Schedulers":[  
-      "No I/O scheduler added yet"
-   ],
    "downloads":{  
       "name":"Nano kernel 0.1",
       "ver":"v0.1",
       "url":""
-   },
-   "changelog":[  
-      {  
-         "added":[  
-            "Everything to be added soon"
-         ]
-      }
-   ]
+   }
 }
