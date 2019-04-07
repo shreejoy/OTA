@@ -1,1 +1,6 @@
-{ "name" : "Nano Kernel V4" , "Ver" : "4" , "url" : " " , "miui_url" : "" }
+{
+"name" : "Nano Kernel V4" , 
+"Ver" : "4" ,
+"url" : " " ,
+"miui_url" : ""
+}
