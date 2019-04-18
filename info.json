@@ -1,8 +1,7 @@
 {
-   "rom":"PixelExperience",
+   "rom":"PixysOS",
    "rom_tag":"pixys",
    "build_type":"official",
-   "version":"A9.0",
    "changelog":"changelog.txt",
    "build_date":"(2019/03/20)",
    "group_link":"https://t.me/redmi5official"
