@@ -23,8 +23,6 @@ def arg_parse():
     switches.add_argument("-C", "--caption", help="Media/Document caption")
     
     args = vars(switches.parse_args())
-    token = args["token"]
-    chat = args["chat"]
     message = args["message"]
     photo = args["photo"]
     gif = args["gif"]
