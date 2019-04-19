@@ -38,11 +38,9 @@ params = (
     ('disable_web_page_preview', "yes")
 )
 telegram_url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
-#send to tg
 telegram_req = post(telegram_url, params=params)
-status = telegram_req.status_code
-response = telegram_req.reason
-if status == 200:
-    print("Message sent")
+telegram_status = telegram_req.status_code
+if telegram_status == 200:
+      print("{0}: Telegram Message sent".format(device))
 else:
-    print("Error: " + response)
+      print("Telegram Error")
