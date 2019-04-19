@@ -21,8 +21,6 @@ data.append('ℹ *Build Type:* {} \n\n'.format(info[0]['build_type']))
 
 data.append('⬇️ [Download Now: ]({}) \n'.format(info[0]['url']))
 data.append('⬇️ [XDA Thread Link: ]({}) \n\n'.format(info[0]['xda_thread']))
-
-data.append('#```{}```#```{}```\n'.format(info[0]['rom_tag'], info[0]['codename']))
     
 # remove empty entries
 for i in data:
