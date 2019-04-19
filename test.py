@@ -31,12 +31,12 @@ for i in data:
 # create the message
 telegram_message = ''.join(data)
 
-files = (
-    ('chat_id', telegram_chat),
-    ('text', telegram_message),
-    ('parse_mode', "Markdown"),
-    ('disable_web_page_preview', "yes")
-)
+files = {
+    'chat_id': (None, telegram_chat),
+    'caption': (None, telegram_message),
+    'parse_mode': (None, "Markdown"),
+    'disable_web_page_preview': (None, "yes"),
+}
 url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
 telegram_req = post(url, files=files)
