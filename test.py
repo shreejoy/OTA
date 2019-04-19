@@ -41,14 +41,14 @@ message = ''.join(data)
 
 
 photo = info[0]['image']
-        params = (
-            ('chat_id', chat),
-            ('text', message),
-            ('parse_mode', mode),
-            ('disable_notification', silent),
-            ('disable_web_page_preview', preview)
-        )
-        url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
+params = (
+    ('chat_id', chat),
+    ('text', message),
+    ('parse_mode', mode),
+    ('disable_notification', silent),
+    ('disable_web_page_preview', preview)
+  )
+    url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
 telegram_req = post(url, files=files)
 status = telegram_req.status_code
