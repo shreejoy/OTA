@@ -16,8 +16,6 @@ def arg_parse():
     group.add_argument("-A", "--audio", help="Audio path")
     group.add_argument("-O", "--voice", help="Voice path")
     group.add_argument("-F", "--file", help="File path")
-    switches.add_argument("-t", "--token", required=True, help="Telegram bot token")
-    switches.add_argument("-c", "--chat", required=True, help="Chat to use as recipient")
     switches.add_argument("-m", "--mode", help="Text parse mode - HTML/Markdown", default="Markdown")
     switches.add_argument("-p", "--preview", help="Disable URL preview - yes/no", default="yes")
     switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
