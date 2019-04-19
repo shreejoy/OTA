@@ -142,7 +142,7 @@ def send_message():
     status = r.status_code
     response = r.reason
     
-    def req_status():
+def req_status():
     if out == 'yes':
         if status == 200:
             print("Message sent")
