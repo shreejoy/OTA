@@ -28,7 +28,7 @@ for i in data:
     if ': \n' in i or '()' in i:
         data.remove(i)
 # create the message
-message = ''.join(data)
+telegram_message = ''.join(data)
 
 
 photo = info[0]['image']
