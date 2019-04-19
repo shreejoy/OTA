@@ -30,8 +30,8 @@ def arg_parse():
         
 def send_message():
 # telegram variables
-bottoken = environ['bottoken']
-chat = "@test_channel_68"
+    bottoken = environ['bottoken']
+    chat = "@test_channel_68"
 # load the json file
 with open('latest.json') as f:
     info = json.load(f)
