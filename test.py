@@ -4,13 +4,13 @@ from os import environ
 from requests import post
 
 global silent, preview
-    switches = ArgumentParser()
-    switches.add_argument("-p", "--preview", help="Disable URL preview - yes/no", default="yes")
-    switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
+switches = ArgumentParser()
+switches.add_argument("-p", "--preview", help="Disable URL preview - yes/no", default="yes")
+switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
     
-    args = vars(switches.parse_args())
-    preview = args["preview"]
-    silent = args["silent"]
+args = vars(switches.parse_args())
+preview = args["preview"]
+silent = args["silent"]
     
 # telegram variables
 bottoken = environ['bottoken']
