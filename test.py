@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 from requests import post
 
 def arg_parse():
-    global message, mode, preview, caption, silent, photo, gif, video, note, audio, voice, file, send, out
+    global message, mode, caption, silent, photo, gif, video, note, audio, voice, file, send, out
     switches = ArgumentParser()
     switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
     args = vars(switches.parse_args())
@@ -58,7 +58,7 @@ for i in data:
 message = ''.join(data)
 
 def send_message():
-    global r, status, response
+    global r, status, response, preview
     if send == "text":
         params = (
             ('chat_id', chat),
