@@ -22,7 +22,6 @@ data.append('ℹ *Build Type:* {} \n\n'.format(info[0]['build_type']))
 data.append('⬇️ [Download Now: ]({}) \n'.format(info[0]['url']))
 data.append('⬇️ [XDA Thread Link: ]({}) \n\n'.format(info[0]['xda_thread']))
  
-
 # remove empty entries
 for i in data:
     if ': \n' in i or '()' in i:
