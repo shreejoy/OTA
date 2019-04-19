@@ -28,7 +28,7 @@ def arg_parse():
     elif file is not None:
         send = "file"
         
-def send_message():
+def send_format():
 # telegram variables
     bottoken = environ['bottoken']
     chat = "@test_channel_68"
@@ -56,7 +56,7 @@ for i in data:
 # create the message
 message = ''.join(data)
 
-
+def send_message():
     global r, status, response
     if send == "text":
         params = (
@@ -156,5 +156,6 @@ message = ''.join(data)
 
 
 arg_parse()
+send_format()
 send_message()
 req_status()
