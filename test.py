@@ -1,4 +1,5 @@
 import json
+import pathlib
 from os import environ
 
 from requests import post
@@ -6,24 +7,29 @@ from requests import post
 # telegram variables
 bottoken = environ['bottoken']
 telegram_chat = "@test_channel_68"
+file = pathlib.Path("changelog.txt")
 # load the json file
 with open('latest.json') as f:
     info = json.load(f)
 # parse the json into telegram message
 data = []
-data.append('⚡️PixysOS Update⚡\n\n')
-data.append('➡ *New build available for* {}\n'.format(info[0]['name']))
-data.append('👤 *By:* {} \n\n'.format(info[0]['maintainer_name']))
+data.append('*PixysOS for {}*\n')
 
-data.append('ℹ *Build Version:* {} \n'.format(info[0]['version']))
-data.append('📆 *Build Date:* {}\n\n\n'.format(info[0]['build_date']))
+data.append('✳️New build available for *{}*\n'.format(info[0]['name']))
 
-data.append('⬇️ [Download Now]({}) \n'.format(info[0]['url']))
-data.append('💬 [XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
- 
-data.append('```#{}``` '.format(info[0]['codename']))    
-data.append('#[{}]({})\n'.format(info[0]['rom_tag'], info[0]['images']))
-data.append('{}'.format(info[0]['images']))
+data.append('👤 *By:* [{}]({}) \n'.format(info[0]['maintainer_name', info[0]['maintainer_url']))
+
+data.append('    ▫️ *Build Version:* {} \n'.format(info[0]['version']))
+data.append('    ◾️ *Build Date:* {}\n'.format(info[0]['build_date']))
+data.append('    ▫️ *MD5:* ```{}```\n\n'.format(info[0]['id']))
+                                                  
+data.append('*Download:* [{}]({}) \n'.format(info[0]['filename'], info[0]['url']))
+data.append('[XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
+                                                  
+if file.exists ():
+    with open('changelog.txt', 'r') as c:
+            data.append('⚙️ *Changelog*:\n\n' + "- " + '_\n' + c.read() + '_\n')
+data.append('*Join* 👉🏻  @PixysOS | @PixysOS_chat')                                                 
 
 # remove empty entries
 for i in data:
