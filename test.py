@@ -31,14 +31,14 @@ for i in data:
 caption = ''.join(data)
 
 
-photo = info[0]['image']
+# photo = info[0]['image']
 files = {
     'chat_id': (None, telegram_chat),
     'caption': (None, caption),
     'parse_mode': (None, "Markdown"),
-    'photo': (photo, open(photo, 'rb')),
+#    'photo': (photo, open(photo, 'rb')),
 }
-url = "https://api.telegram.org/bot" + bottoken + "/sendPhoto"
+url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
 telegram_req = post(url, files=files)
 status = telegram_req.status_code
