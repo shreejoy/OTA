@@ -24,7 +24,7 @@ data.append('   ◾️ *Build Date:* {}\n'.format(info[0]['build_date']))
 data.append('   ▫️ *MD5:*```{}```\n\n'.format(info[0]['id']))
                                                   
 data.append('*Download:* [{}]({}) \n\n'.format(info[0]['filename'], info[0]['url']))
-data.append('[XDA Thread](tg://{}) \n\n'.format(info[0]['xda_thread']))
+data.append('[XDA Thread](buttonurl:{}) \n\n'.format(info[0]['xda_thread']))
 
 # remove empty entries
 for i in data:
