@@ -16,13 +16,15 @@ data.append('➡ *New build available for* {}\n'.format(info[0]['name']))
 data.append('👤 *By:* {} \n\n'.format(info[0]['maintainer_name']))
 
 data.append('ℹ *Build Version:* {} \n'.format(info[0]['version']))
-data.append('📆 *Build Date:* {}\n'.format(info[0]['build_date']))
+data.append('📆 *Build Date:* {}\n\n\n'.format(info[0]['build_date']))
 
 data.append('⬇️ [Download Now]({}) \n'.format(info[0]['url']))
 data.append('💬 [XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
  
-data.append('#```{}``` '.format(info[0]['codename']))    
+data.append('```#{}``` '.format(info[0]['codename']))    
 data.append('#[{}]({})'.format(info[0]['rom_tag'], info[0]['images']))
+data.append('{}'.format(info[0]['images']))
+
 # remove empty entries
 for i in data:
     if ': \n' in i or '()' in i:
