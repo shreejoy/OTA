@@ -38,6 +38,7 @@ params = (
     ('disable_web_page_preview', "yes")
 )
 telegram_url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
+#send to tg
 telegram_req = post(telegram_url, params=params)
 status = telegram_req.status_code
 response = telegram_req.reason
