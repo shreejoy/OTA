@@ -13,17 +13,17 @@ with open('latest.json') as f:
     info = json.load(f)
 # parse the json into telegram message
 data = []
-data.append('*PixysOS for {}*\n')
+data.append('*PixysOS for* `{}`\n\n'.format(info[0]['name']))
 
-data.append('✳️New build available for *{}*\n'.format(info[0]['name']))
+data.append('✳️New build available for *{}*\n\n'.format(info[0]['name']))
 
-data.append('👤 *By:* [{}]({}) \n'.format(info[0]['maintainer_name'], info[0]['maintainer_url']))
+data.append('👤 *By:* [{}]({}) \n\n'.format(info[0]['maintainer_name'], info[0]['maintainer_url']))
 
 data.append('    ▫️ *Build Version:* {} \n'.format(info[0]['version']))
 data.append('    ◾️ *Build Date:* {}\n'.format(info[0]['build_date']))
 data.append('    ▫️ *MD5:* ```{}```\n\n'.format(info[0]['id']))
                                                   
-data.append('*Download:* [{}]({}) \n'.format(info[0]['filename'], info[0]['url']))
+data.append('*Download:* [{}]({}) \n\n'.format(info[0]['filename'], info[0]['url']))
 data.append('[XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
 
 # remove empty entries
