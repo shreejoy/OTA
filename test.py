@@ -5,7 +5,7 @@ from requests import post
     
 # telegram variables
 bottoken = environ['bottoken']
-chat = "@test_channel_68"
+telegram_chat = "@test_channel_68"
 # load the json file
 with open('latest.json') as f:
     info = json.load(f)
