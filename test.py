@@ -29,7 +29,9 @@ data.append('[XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
 if file.exists ():
     with open('changelog.txt', 'r') as c:
             data.append('⚙️ *Changelog*:\n\n' + "- " + '_\n' + c.read() + '_\n')
-data.append('*Join* 👉🏻  @PixysOS | @PixysOS_chat')                                                 
+            data.append('*Join* 👉🏻  @PixysOS | @PixysOS_chat')
+else:
+    data.append('*Join* 👉🏻  @PixysOS | @PixysOS_chat')
 
 # remove empty entries
 for i in data:
