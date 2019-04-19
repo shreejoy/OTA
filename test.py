@@ -32,12 +32,12 @@ caption = ''.join(data)
 
 
 # photo = info[0]['image']
-files = {
-    'chat_id': (None, telegram_chat),
-    'caption': (None, caption),
-    'parse_mode': (None, "Markdown"),
+files = (
+    ('chat_id', telegram_chat),
+    ('caption', caption),
+    ('parse_mode', "Markdown")
 #    'photo': (photo, open(photo, 'rb')),
-}
+)
 url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
 telegram_req = post(url, files=files)
