@@ -2,15 +2,6 @@ import json
 from os import environ
 
 from requests import post
-
-global silent, preview
-switches = ArgumentParser()
-switches.add_argument("-p", "--preview", help="Disable URL preview - yes/no", default="yes")
-switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
-    
-args = vars(switches.parse_args())
-preview = args["preview"]
-silent = args["silent"]
     
 # telegram variables
 bottoken = environ['bottoken']
@@ -42,12 +33,11 @@ message = ''.join(data)
 
 photo = info[0]['image']
 params = (
-    ('chat_id', chat),
-    ('text', message),
-    ('parse_mode', mode),
-    ('disable_notification', silent),
-    ('disable_web_page_preview', preview)
-  )
+    ('chat_id', telegram_chat),
+    ('text', telegram_message),
+    ('parse_mode', "Markdown"),
+    ('disable_web_page_preview', "yes")
+)
     url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
 telegram_req = post(url, files=files)
