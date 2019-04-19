@@ -30,8 +30,6 @@ for i in data:
 # create the message
 telegram_message = ''.join(data)
 
-
-photo = info[0]['image']
 files = (
     ('chat_id', telegram_chat),
     ('text', telegram_message),
