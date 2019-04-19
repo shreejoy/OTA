@@ -15,7 +15,7 @@ with open('latest.json') as f:
 data = []
 data.append('⚡️ *New PixysOS Update* ⚡️\n\n')
 
-data.append('✳️ New build available for *{}*\n'.format(info[0]['name']))
+data.append('📱 New build available for *{}* ```({})```\n'.format(info[0]['name'], info[0]['codename']))
 
 data.append('*By:* [{}]({}) \n\n'.format(info[0]['maintainer_name'], info[0]['maintainer_url']))
 
