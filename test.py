@@ -29,7 +29,7 @@ def arg_parse():
         send = "file"
         
 def send_format():
-    global token, chat
+    global token, chat, preview
 # telegram variables
     bottoken = environ['bottoken']
     chat = "@test_channel_68"
