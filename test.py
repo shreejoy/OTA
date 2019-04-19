@@ -22,7 +22,7 @@ data.append('⬇️ [Download Now]({}) \n'.format(info[0]['url']))
 data.append('💬 [XDA Thread]({}) \n\n'.format(info[0]['xda_thread']))
  
 data.append('```#{}``` '.format(info[0]['codename']))    
-data.append('#[{}]({})'.format(info[0]['rom_tag'], info[0]['images']))
+data.append('#[{}]({})\n'.format(info[0]['rom_tag'], info[0]['images']))
 data.append('{}'.format(info[0]['images']))
 
 # remove empty entries
