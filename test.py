@@ -12,7 +12,7 @@ with open('latest.json') as f:
 # parse the json into telegram message
 data = []
 data.append('⚡️PixysOS Update⚡\n\n')
-data.append('➡ *New build available for* *{}* *{}* \n'.format(info[0]['name'], info[0]['codename']))
+data.append('➡ *New build available for* {} {} \n'.format(info[0]['name'], info[0]['codename']))
 data.append('👤 *By:* {} \n\n'.format(info[0]['maintainer_name']))
 
 data.append('📆 *Build Date:* {}\n'.format(info[0]['build_date']))
