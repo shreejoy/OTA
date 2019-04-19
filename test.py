@@ -35,9 +35,7 @@ message = ''.join(data)
 files = (
     ('chat_id', telegram_chat),
     ('text', message),
-    ('parse_mode', "Markdown"),
-    ('disable_notification', silent),
-    ('disable_web_page_preview', preview)
+    ('parse_mode', "Markdown")
 )
 url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
