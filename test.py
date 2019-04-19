@@ -32,7 +32,7 @@ telegram_message = ''.join(data)
 
 
 photo = info[0]['image']
-params = (
+files = (
     ('chat_id', telegram_chat),
     ('text', telegram_message),
     ('parse_mode', "Markdown"),
