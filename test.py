@@ -37,9 +37,8 @@ params = (
     ('parse_mode', "Markdown"),
     ('disable_web_page_preview', "yes")
 )
-url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
-# post to telegram
-telegram_req = post(url, files=files)
+telegram_url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
+telegram_req = post(telegram_url, params=params)
 status = telegram_req.status_code
 response = telegram_req.reason
 if status == 200:
