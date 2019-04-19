@@ -36,7 +36,7 @@ params = (
     ('chat_id', telegram_chat),
     ('text', telegram_message),
     ('parse_mode', "Markdown"),
-    ('disable_web_page_preview', "no")
+    ('disable_web_page_preview', "yes")
 )
 telegram_url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 telegram_req = post(telegram_url, params=params)
