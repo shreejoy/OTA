@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 from requests import post
 
 def arg_parse():
-    global token, chat, message, mode, preview, caption, silent, photo, gif, video, note, audio, voice, file, send, out
+    global message, mode, preview, caption, silent, photo, gif, video, note, audio, voice, file, send, out
     switches = ArgumentParser()
     switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
     args = vars(switches.parse_args())
@@ -29,6 +29,7 @@ def arg_parse():
         send = "file"
         
 def send_format():
+    global token, chat
 # telegram variables
     bottoken = environ['bottoken']
     chat = "@test_channel_68"
