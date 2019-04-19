@@ -11,7 +11,7 @@ def arg_parse():
     args = vars(switches.parse_args())
     silent = args["silent"]
     
-        if message is not None:
+    if message is not None:
         send = "text"
     elif photo is not None:
         send = "photo"
