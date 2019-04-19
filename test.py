@@ -7,9 +7,39 @@ from requests import post
 def arg_parse():
     global message, mode, caption, silent, photo, gif, video, note, audio, voice, file, send, out
     switches = ArgumentParser()
+    group = switches.add_mutually_exclusive_group(required=True)
+    group.add_argument("-M", "--message", help="Text message")
+    group.add_argument("-P", "--photo", help="Photo path")
+    group.add_argument("-G", "--gif", help="GIF Photo path")
+    group.add_argument("-V", "--video", help="Video path")
+    group.add_argument("-N", "--note", help="Video Note path")
+    group.add_argument("-A", "--audio", help="Audio path")
+    group.add_argument("-O", "--voice", help="Voice path")
+    group.add_argument("-F", "--file", help="File path")
+    switches.add_argument("-t", "--token", required=True, help="Telegram bot token")
+    switches.add_argument("-c", "--chat", required=True, help="Chat to use as recipient")
+    switches.add_argument("-m", "--mode", help="Text parse mode - HTML/Markdown", default="Markdown")
+    switches.add_argument("-p", "--preview", help="Disable URL preview - yes/no", default="yes")
     switches.add_argument("-s", "--silent", help="Disable Notification Sound - yes/no", default="no")
+    switches.add_argument("-d", "--output", help="Disable Script output - yes/no", default="yes")
+    switches.add_argument("-C", "--caption", help="Media/Document caption")
+    
     args = vars(switches.parse_args())
+    token = args["token"]
+    chat = args["chat"]
+    message = args["message"]
+    photo = args["photo"]
+    gif = args["gif"]
+    video = args["video"]
+    note = args["note"]
+    audio = args["audio"]
+    voice = args["voice"]
+    file = args["file"]
+    mode = args["mode"]
+    preview = args["preview"]
     silent = args["silent"]
+    out = args["output"]
+    caption = args["caption"]
     
     if message is not None:
         send = "text"
@@ -29,7 +59,7 @@ def arg_parse():
         send = "file"
         
 def send_format():
-    global token, chat, preview
+    global token, chat
 # telegram variables
     bottoken = environ['bottoken']
     chat = "@test_channel_68"
@@ -58,7 +88,7 @@ for i in data:
 message = ''.join(data)
 
 def send_message():
-    global r, status, response, preview
+    global r, status, response
     if send == "text":
         params = (
             ('chat_id', chat),
