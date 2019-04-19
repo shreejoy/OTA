@@ -34,9 +34,10 @@ caption = ''.join(data)
 # photo = info[0]['image']
 files = (
     ('chat_id', telegram_chat),
-    ('caption', caption),
-    ('parse_mode', "Markdown")
-#    'photo': (photo, open(photo, 'rb')),
+    ('text', message),
+    ('parse_mode', "Markdown"),
+    ('disable_notification', silent),
+    ('disable_web_page_preview', preview)
 )
 url = "https://api.telegram.org/bot" + bottoken + "/sendMessage"
 # post to telegram
