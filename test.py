@@ -17,7 +17,7 @@ data.append('⚡️ *New PixysOS Update* ⚡️\n\n')
 
 data.append('📱 New build available for *{}* ```({})```\n'.format(info['name'], info['codename']))
 
-data.append('*By:* [{}]({}) \n\n'.format(info['maintainer_name'], info['maintainer_url']))
+data.append('*By:* [{}]({}) \n\n'.format(info[0]['maintainer_name'], info['maintainer_url']))
 
 data.append('   ▫️ *Build Version:* {} \n'.format(info['version']))
 data.append('   ◾️ *Build Date:* {}\n'.format(info['build_date']))
