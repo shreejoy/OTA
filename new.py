@@ -23,6 +23,7 @@ from requests import get, post
 
 # telegram variables
 bottoken = environ['bottoken']
+cname = environ['codename']
 telegram_chat = "@test_channel_68"
 
 c_name = json.loads(get(
