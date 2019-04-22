@@ -41,7 +41,7 @@ for v in devices:
 else:
     print("No information about this device found")
     
-    id = "{link["response"]["id"]}"
+    id = {link["response"]["id"]}
     build_date = "{link["response"]["build_date"]}"
     version = "{link["response"]["version"]}"
     filename = "{link["response"]["filename]}"
