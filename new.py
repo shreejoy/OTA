@@ -16,7 +16,7 @@ cname = "rosy"
 telegram_chat = "@test_channel_68"
 
 c_name = json.loads(get(
-    "https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
+    "https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/{cname}/build.json").content)
 devices = json.loads(get(
     "https://github.com/PixysOS-Devices/official_devices/blob/master/devices.json").content)
     
