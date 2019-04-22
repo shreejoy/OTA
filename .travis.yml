@@ -10,12 +10,16 @@ before_install:
      echo "Not running CI since code were not changed."
      exit
    fi
+
+before_script:
+  - wget https://raw.githubusercontent.com/shreejoy/OTA/master/check_device.sh
+  - bash check_device.sh
 script:
   - pip3 install -r requirements.txt 
-  - python3.6 test.py
+  - python3.6 new.py
   
 notifications:
   email:
     on_success: never
-    on_failure: always
+    on_failure: never
 
