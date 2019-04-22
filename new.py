@@ -33,19 +33,20 @@ devices = json.loads(get(
     
 for v in devices:
     if ["codename"] == cname:
-        device = v["name"]
-        maintainer_url = v["maintainer_url"]
-        maintainer_name = v["maintainer_name"]
-        xda_thread = v["xda_thread"]
+        device = v['name']
+        maintainer_url = v['maintainer_url']
+        maintainer_name = v['maintainer_name']
+        xda_thread = v['xda_thread']
         break
 else:
     print("No information about this device found")
-    
-    id="{link["response"]["id"]}"
-    build_date="{link["response"]["build_date"]}"
-    version="{link["response"]["version"]}"
-    filename="{link["response"]["filename]}"
-    url="{link["response"]["url"]}"
+
+for link in cname:
+    id= link['response']['id']
+    build_date= link['response']['build_date']
+    version= link['response']['version']
+    filename= link['response']['filename']
+    url= link['response']['url']
     
  telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
                     "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
