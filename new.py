@@ -39,7 +39,6 @@ for v in devices:
         xda_thread = v["xda_thread"]
         break
 else:
-    # Some default action
     print("No information about this device found")
     
     id = {link["response"]["id"]}
