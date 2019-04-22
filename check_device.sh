@@ -12,6 +12,7 @@ for i in $(jq -r ".[] | .codename" devices.json)
       echo -e "There is a new update for $i ";
       echo -e " ";
       echo -e "Getting build information from remote source !!";
+      export cname=$i
       echo -e " ";
 else
       echo -e "No new update for $i"
