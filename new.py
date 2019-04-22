@@ -8,7 +8,6 @@ from datetime import datetime, date
 from glob import glob
 from hashlib import md5
 from os import remove, system, environ, path, getcwd, chdir, rename, stat
-from hurry.filesize import size, alternative
 from requests import get, post
 
 # telegram variables
