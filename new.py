@@ -37,7 +37,6 @@ for v in devices:
         maintainer_url = v['maintainer_url']
         maintainer_name = v['maintainer_name']
         xda_thread = v['xda_thread']
-print(device, maintainer_url, maintainer_name, xda_thread)
         break
 else:
     print("No information about this device found")
@@ -50,6 +49,7 @@ for link in cname['response']:
     url= link['response']['url']
  
 print(build_date, version, filename, url, version)
+print(device, maintainer_url, maintainer_name, xda_thread)
     
     telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
                     "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
