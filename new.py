@@ -41,11 +41,11 @@ for v in devices:
 else:
     print("No information about this device found")
     
-    id = {link["response"]["id"]}
-    build_date = "{link["response"]["build_date"]}"
-    version = "{link["response"]["version"]}"
-    filename = "{link["response"]["filename]}"
-    url = "{link["response"]["url"]}"
+    id="{link["response"]["id"]}"
+    build_date="{link["response"]["build_date"]}"
+    version="{link["response"]["version"]}"
+    filename="{link["response"]["filename]}"
+    url="{link["response"]["url"]}"
     
  telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
                     "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
