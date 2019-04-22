@@ -40,7 +40,7 @@ for v in devices:
         break
 else:
     # Some default action
-    print ("No information about this device found")
+    print("No information about this device found")
     
     id = {link["response"]["id"]}
     build_date = {link["response"]["build_date"]}
