@@ -51,7 +51,7 @@ for link in cname['response']:
  
 print(build_date, version, filename, url, version)
     
-telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
+    telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
                     "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
                     "*Download:* [{}]({}) \n\n" \
                     .format(device, cname, version, build_date, id, filename, url) 
