@@ -31,12 +31,12 @@ c_name = json.loads(get(
 devices = json.loads(get(
     "https://github.com/PixysOS-Devices/official_devices/blob/master/devices.json").content)
     
-for cname in devices[0][]:
+for v in devices:
     if ["codename"] == cname:
-        device = codename["name"]
-        maintainer_url = codename["maintainer_url"]
-        maintainer_name = codename["maintainer_name"]
-        xda_thread = codename["xda_thread"]
+        device = v["name"]
+        maintainer_url = v["maintainer_url"]
+        maintainer_name = v["maintainer_name"]
+        xda_thread = v["xda_thread"]
         break
 else:
     # Some default action
