@@ -1,6 +1,6 @@
 #! /bin/sh
       
-      export ID=$TRAVIS_COMMIT
+      export ID=$CI_COMMIT_ID
 	  git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT > commit.txt
     echo "$(<commit .txt )"
       cat commit.txt | cut -d "/" -f1
