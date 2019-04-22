@@ -50,10 +50,10 @@ for link in cname['response']:
 print(build_date, version, filename, url, version)
 print(device, maintainer_url, maintainer_name, xda_thread)
     
-    telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
-                    "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
-                    "*Download:* [{}]({}) \n\n" \
-                    .format(device, cname, version, build_date, id, filename, url) 
+  telegram_message = "⚡️ *New PixysOS Update* ⚡️\n\n 📱 New build available for *{}* `({})`\n" \
+                     "   ▫️ *Build Version:* {} \n    ◾️ *Build Date:* {}\n    ▫️ *MD5:*```{}```\n\n" \
+                     "*Download:* [{}]({}) \n\n" \
+                     .format(device, cname, version, build_date, id, filename, url) 
                     
             params = (
                 ('chat_id', telegram_chat),
