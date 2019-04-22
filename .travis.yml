@@ -12,8 +12,8 @@ before_install:
    fi
 
 before_script:
-  - wget https://raw.githubusercontent.com/shreejoy/OTA/master/check_device.sh
-  - bash check_device.sh
+  - wget https://raw.githubusercontent.com/shreejoy/OTA/master/device.sh
+  - bash device.sh
 script:
   - pip3 install -r requirements.txt 
   - python3.6 new.py
