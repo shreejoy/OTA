@@ -26,8 +26,8 @@ for v in devices:
         maintainer_url = v['maintainer_url']
         maintainer_name = v['maintainer_name']
         xda_thread = v['xda_thread']
-else:
-    print("No information about this device found")
+    else:
+        print("No information about this device found")
 
 for link in cname['response']:
     id= link['response']['id']
