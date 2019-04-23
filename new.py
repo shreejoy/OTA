@@ -15,7 +15,7 @@ bottoken = environ['bottoken']
 cname = "rosy"
 telegram_chat = "@test_channel_68"
 
- c_name = json.loads(get(
+c_name = json.loads(get(
      "https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/{}/build.json".format(cname).content)
 devices = json.loads(get(
     "https://github.com/PixysOS-Devices/official_devices/blob/master/devices.json").content)
