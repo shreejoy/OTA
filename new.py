@@ -21,7 +21,7 @@ devices = json.loads(get("https://raw.githubusercontent.com/shreejoy/official_de
 for v in devices:
     device = v['name']
     maintainer_url = v['maintainer_url']
-    maintainer_name = v['maintainer_name'  
+    maintainer_name = v['maintainer_name']  
     xda_thread = v['xda_thread']
 
 for link in cname['response']:
