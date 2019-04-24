@@ -20,16 +20,16 @@ devices = json.loads(get("https://raw.githubusercontent.com/shreejoy/official_de
     
 for v in devices:
     device = v[0]['name']
-    maintainer_url = v['maintainer_url']
-    maintainer_name = v['maintainer_name']  
-    xda_thread = v['xda_thread']
+    maintainer_url = v[0]['maintainer_url']
+    maintainer_name = v[0]['maintainer_name']  
+    xda_thread = v[0]['xda_thread']
 
 for link in cname:
-    id= link['response']['id']
-    build_date= link['response']['build_date']
-    version= link['response']['version']
-    filename= link['response']['filename']
-    url= link['response']['url']
+    id= link['response'][0]['id']
+    build_date= link['response'][0]['build_date']
+    version= link['response'][0]['version']
+    filename= link['response'][0]['filename']
+    url= link['response'][0]['url']
  
     print(build_date, version, filename, url, version)
     print(device, maintainer_url, maintainer_name, xda_thread)
