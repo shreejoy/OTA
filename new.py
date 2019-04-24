@@ -16,16 +16,13 @@ cname = "rosy"
 telegram_chat = "@test_channel_68"
 
 c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
-devices = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/devices.json").content)
+devices = json.loads(get("https://raw.githubusercontent.com/shreejoy/official_devices-3/master/devices.json").content)
     
 for v in devices:
-    if ["codename"] == cname:
-        device = v['name']
-        maintainer_url = v['maintainer_url']
-        maintainer_name = v['maintainer_name']
-        xda_thread = v['xda_thread']
-    else:
-        print("No information about this device found")
+    device = v['name']
+    maintainer_url = v['maintainer_url']
+    maintainer_name = v['maintainer_name'  
+    xda_thread = v['xda_thread']
 
 for link in cname['response']:
     id= link['response']['id']
