@@ -19,12 +19,12 @@ c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/offic
 devices = json.loads(get("https://raw.githubusercontent.com/shreejoy/official_devices-3/master/devices.json").content)
     
 for v in devices:
-    device = v['name']
+    device = v[0]['name']
     maintainer_url = v['maintainer_url']
     maintainer_name = v['maintainer_name']  
     xda_thread = v['xda_thread']
 
-for link in cname['response']:
+for link in cname:
     id= link['response']['id']
     build_date= link['response']['build_date']
     version= link['response']['version']
