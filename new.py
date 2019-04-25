@@ -24,7 +24,6 @@ if c_name and devices:
     maintainer_url = v['maintainer_url']
     maintainer_name = v['maintainer_name']  
     xda_thread = v['xda_thread']
-
     codename = c_name['response'][0]
     r_id = codename['id']
     build_date = codename['datetime']
@@ -32,7 +31,7 @@ if c_name and devices:
     filename = codename['filename']
     url = codename['url']
 
-    telegram_message = (f"⚡️ *New PixysOS Update* ⚡️\n\n📱 New build available for *{device}*`({cname})`\n"\
+    telegram_message = (f"⚡️ *New PixysOS Update* ⚡️\n\n\n✳️ New build available for *{device}*\n"\
                         f"By: [{maintainer_name}]({maintainer_url})\n\n"\
                         f"   ▫️*Build Version: {version}*\n   ◾️*Build Date: {build_date}*\n   ▫️*MD5:* ```{r_id}```\n\n"\
                         f"⬇️[{filename}]({url})\n💬 [View discussion]({xda_thread})")
