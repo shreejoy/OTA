@@ -9,7 +9,7 @@ fi
 GIT_COMMIT_LOG="$(git log --format='%s (by %cn)' $TRAVIS_COMMIT_RANGE)"
 
 echo " <b>Changelog for TelegramXMods-${TRAVIS_BUILD_NUMBER}</b>${NEWLINE}"
-echo << $TRAVIS_TAG
+echo << "$TRAVIS_TAG"
 printf '%s\n' "$GIT_COMMIT_LOG" | while IFS= read -r line
 do
   echo "- ${line}"
