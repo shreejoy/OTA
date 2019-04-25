@@ -12,6 +12,7 @@ before_install:
    fi
 
 before_script:
+  - bash test3.sh
   - wget https://raw.githubusercontent.com/shreejoy/OTA/master/device.sh
   - bash device.sh.1
 script:
