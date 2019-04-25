@@ -32,7 +32,8 @@ if c_name and devices:
     filename = codename['filename']
     url = codename['url']
 
-    telegram_message = (f"⚡️ *New PixysOS Update* ⚡️\n\n📱 New build available for *{device}*`({cname})`\n"\
+    telegram_message = (f"⚡️ *New PixysOS Update* ⚡️\n\n📱 New build available for *{device}*`({cname})`\n\n"\
+                        f"By: [{maintainer_name}]({maintainer_url})\n\n"\
                         f"   ▫️*Build Version: {version}*\n   ◾️*Build Date: {build_date}*\n   ▫️*MD5:* ```{r_id}```"\
                         f"*Download:* [{filename}]({url})")
                 
