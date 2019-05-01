@@ -5,8 +5,7 @@
             "Version 1.2 (July 1, 2018)",
             "Remove Qnovo charging interface",
             "Add Suspend driver for idle battery drain",
-            "Add NVS hibernation driver",
-            "Fixed battery drain (Which persists in the previous version of CodeX)"
+            "Add NVS hibernation driver"
          ]
       },
       {  
