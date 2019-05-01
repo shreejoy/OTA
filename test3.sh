@@ -14,8 +14,9 @@ wget https://gitlab.com/pshreejoy15/ota/raw/master/jsonFormatter.py
 python3 jsonFormatter.py
 git config --global user.name "Shreejoy Dash"
 git config --global user.email "pshreejoy15@gmail.com"
-git add . 
+git add pixys.json 
 git commit -m "$(date) $CODENAME update"
+git push
 cd ..
 python3 new.py
 
