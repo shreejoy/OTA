@@ -6,12 +6,14 @@ export CODENAME=$(git diff-tree --no-commit-id --name-only -r $COMMIT_ID | cut -
 # export CODENAME=santoni
 echo "There is a Update for $CODENAME";
 DEVICE="[$(cat devices.json | jq -c --arg CODENAME "$CODENAME" '.[] | select(.codename==$CODENAME)')]"
-git clone  https://gitlab.com/pshreejoy15/ota.git
-rm -rf ota/pixys.json
-echo "$DEVICE" >> ota/pixys.json
-cd ota
+git clone  git@gitlab.com:pshreejoy15/rom_ota.git
+rm -rf rom_ota/pixys.json
+echo "$DEVICE" >> rom_ota/pixys.json
+cd rom_ota
 wget https://gitlab.com/pshreejoy15/ota/raw/master/jsonFormatter.py 
 python3 jsonFormatter.py
+git add . 
+git commit -m "$(date) $CODENAME update"
 cd ..
 python3 new.py
 
