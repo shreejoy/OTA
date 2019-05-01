@@ -12,6 +12,8 @@ echo "$DEVICE" >> rom_ota/pixys.json
 cd rom_ota
 wget https://gitlab.com/pshreejoy15/ota/raw/master/jsonFormatter.py 
 python3 jsonFormatter.py
+git config --global user.name "Shreejoy Dash"
+git config --global user.email "pshreejoy15@gmail.com"
 git add . 
 git commit -m "$(date) $CODENAME update"
 cd ..
