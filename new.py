@@ -12,7 +12,7 @@ from requests import get, post
 
 #Telegram variables
 bottoken = environ['bottoken']
-cname = environ['CODENAME']
+cname = "rosy"
 telegram_chat = "@test_channel_68"
 
 c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
