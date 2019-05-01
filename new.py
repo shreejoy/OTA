@@ -15,7 +15,7 @@ bottoken = environ['bottoken']
 cname = environ['CODENAME']
 telegram_chat = "@test_channel_68"
 
-c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
+c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + os.environ.get('CODENAME') + "/build.json").content)
 devices = json.loads(get("https://gitlab.com/pshreejoy15/ota/raw/master/pixys.json").content)
 
 if c_name and devices:
