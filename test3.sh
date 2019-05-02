@@ -17,7 +17,7 @@ git config --global user.name "Shreejoy Dash"
 git config --global user.email "pshreejoy15@gmail.com"
 git add pixys.json 
 git commit -m "$(date) $CODENAME update"
-git -f push
+git push
 cd ..
 python3 new.py
 
