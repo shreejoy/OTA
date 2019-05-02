@@ -14,7 +14,7 @@ from requests import get, post
 bottoken = environ['bottoken']
 cname = environ['CODENAME']
 telegram_chat = "@test_channel_68"
-build_date = codename['datetime']
+build_date = environ['DTIME']
 
 c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
 devices = json.loads(get("https://gitlab.com/pshreejoy15/rom_ota/raw/master/pixys.json").content)
