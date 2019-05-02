@@ -14,6 +14,7 @@ from requests import get, post
 bottoken = environ['bottoken']
 cname = environ['CODENAME']
 telegram_chat = "@test_channel_68"
+build_date = codename['datetime']
 
 c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
 devices = json.loads(get("https://gitlab.com/pshreejoy15/rom_ota/raw/master/pixys.json").content)
@@ -26,14 +27,12 @@ if c_name and devices:
     xda_thread = v['xda_thread']
     codename = c_name['response'][0]
     r_id = codename['id']
-    build_date = codename['datetime']
     version = codename['version']
     filename = codename['filename']
     url = codename['url']
 
     telegram_message = (f"*New PixysOS Update* on \n\n⬇️ *Download*\n[{filename}]({url})\n\n"\
-                        f"   📱*Device* : {device}\n   ⚡️*Build Version*:{version}\n   ⚡️*MD5*:{r_id}\n\n"\
-                        f"   ▫️*Build Version: {version}*\n   ◾️*Build Date: {build_date}*\n   ▫️*MD5:* ```{r_id}```\n\n"\
+                        f"   📱*Device* : {device}\n   ⚡️*Build Version*:{version}\n   ⚡️*MD5*:```{r_id}```\n\n"\
                         f"⬇️[{filename}]({url})\n💬 [View discussion]({xda_thread})")
                 
     params = (('chat_id', telegram_chat),
