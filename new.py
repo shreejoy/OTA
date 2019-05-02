@@ -14,7 +14,7 @@ from requests import get, post
 bottoken = environ['bottoken']
 cname = environ['CODENAME']
 telegram_chat = "@test_channel_68"
-build_date = environ['DTIME']
+# build_date = environ['DTIME']
 
 c_name = json.loads(get("https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/" + cname + "/build.json").content)
 devices = json.loads(get("https://gitlab.com/pshreejoy15/rom_ota/raw/master/pixys.json").content)
@@ -32,7 +32,7 @@ if c_name and devices:
     filename = codename['filename']
     url = codename['url']
 
-    telegram_message = (f"*New PixysOS Update* on *{build_date}*\n\n⬇️ *Download*\n[{filename}]({url})\n\n"
+    telegram_message = (f"*New PixysOS Update* on \n\n⬇️ *Download*\n[{filename}]({url})\n\n"
                         f"   📱*Device* : {device}\n   ⚡️*Build Version*:{version}\n   ⚡️*MD5*:{r_id}\n\n"
                         f"💬 [View discussion]({xda_thread})\n⚙️ [Changelogs]({changelog})\n\n*By*: [{maintainer_name}]({maintainer_name})\n\n"
                         f"@PixysOS  | @PixysOS_Chat")
