@@ -32,7 +32,7 @@ if c_name and devices:
     url = codename['url']
 
     telegram_message = (f"*New PixysOS Update* on \n\n⬇️ *Download*\n[{filename}]({url})\n\n"\
-                        f"By: [{maintainer_name}]({maintainer_url})\n\n"\
+                        f"   📱*Device* : {device}\n   ⚡️*Build Version*:{version}\n   ⚡️*MD5*:{r_id}\n\n"\
                         f"   ▫️*Build Version: {version}*\n   ◾️*Build Date: {build_date}*\n   ▫️*MD5:* ```{r_id}```\n\n"\
                         f"⬇️[{filename}]({url})\n💬 [View discussion]({xda_thread})")
                 
