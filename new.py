@@ -35,7 +35,7 @@ if c_name and devices:
     telegram_message = (f"*New PixysOS Update* on {build_date} \n\n⬇️ *Download*\n[{filename}]({url})\n\n"\
                         f"   📱*Device* : {device}\n   ⚡️*Build Version*:{version}\n   ⚡️*MD5*:```{r_id}```\n\n"\
                         f"💬 [View discussion]({xda_thread})\n⚙️ [Changelogs]({changelog})\n\n*By*: [{maintainer_name}]({maintainer_url})\n\n"\
-                        f"Join👉@PixysOS_Chat")                
+                        f"*Join*👉 [@PixysOS](https://t.me/PixysOS) | [@PixysOS_Chat](https://t.me/PixysOS_chat)")                
     params = (('chat_id', telegram_chat),
               ('text', telegram_message),
               ('parse_mode', "Markdown"),
