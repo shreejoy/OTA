@@ -9,6 +9,7 @@ mkdir check
 cd check
    wget -q https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/$CODENAME/build.json
    URL=$(jq -r '.response.url' build.json)
+cd ..   
    if wget -q "$URL"; then
       echo "There is a Update for $CODENAME";
       if CODENAME==devices.json; then
@@ -30,7 +31,9 @@ cd check
             git push
          cd ..
          python3 tg_post.py
-fi
+      fi
+    else
+    
 
 
 
