@@ -21,9 +21,10 @@ if CODENAME==devices.json; then
    echo -e "There is some changes to devices.json, So nothing to post"
    exit
 else
-   if wget -q "$URL"; then
+for VARIABLE in 1 2 3
+do
+   if wget -q --spider "$URL"; then
       echo -e "Link is valid for OTA"
-      echo "[RELEASING BUILD] $FNAME"
       DEVICE="[$(cat devices.json | jq -c --arg CODENAME "$CODENAME" '.[] | select(.codename==$CODENAME)')]"
       git clone  git@gitlab.com:pshreejoy15/rom_ota.git
       rm -rf rom_ota/pixys.json
@@ -38,9 +39,20 @@ else
          git commit -m "$DTIME $CODENAME update"
          git push
       cd ..
-      python3 tg_post.py
+      if python3 tg_post.py; then
+            echo "[BUILD RELEASED] $FNAME"
+            exit
+       else 
+       wget -q https://raw.githubusercontent.com/PixysOS-Devices/official_devices/master/$CODENAME/build.json
+       wget jsonformatter
+       if python3 jsonformatter; then
+       echo "There might be some unusal error , Administrators please have a look"
+       else 
+       echo "[JSON ERROR] $(<"build.json")"
    else
+   sleep 10
    fi
+   done
 fi
     
 
